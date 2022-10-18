@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+D:\jml_data\sts3_data\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2328374430.index
+\BoardMyWeb\src\main\java
+D:\jml_data\sts3_data\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1923964915.index
+\test01\src\main\java
+D:\jml_data\sts3_data\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\483704846.index
+\MyWeb\src\main\java
+D:\jml_data\sts3_data\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2806564625.index
+\BoardWeb\src\main\java
