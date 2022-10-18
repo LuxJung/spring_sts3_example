@@ -17,12 +17,12 @@ public class BoardServiceClient {
 		
 		// 3. 글 등록 기능 테스트
 		BoardVO vo = new BoardVO();
-		/*
-		vo.setTitle("임시제목2");
+		
+		vo.setTitle("임시제목4");
 		vo.setWriter("럭뎡");
 		vo.setContent("임시 내용...........");
 		boardService.insertBoard(vo);
-		*/
+		
 		// 4. 글 목록 검색 기능 테슽트
 		List<BoardVO> boardList = boardService.getBoardList(vo);
 		for(BoardVO board : boardList) {

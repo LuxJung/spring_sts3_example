@@ -11,11 +11,34 @@
 					<context:component-scan base-package="com.springbook.biz">
 					</context:component-scan>
 					
-					<bean id="log" class="com.springbook.biz.common.LogAdvice"></bean>
+					<bean id="log" 				class="com.springbook.biz.common.LogAdvice"></bean>
+					<bean id="afterReturning" 	class="com.springbook.biz.common.AfterReturningAdvice"></bean>
+					<bean id="afterThrowing" 	class="com.springbook.biz.common.AfterThrowingAdvice"></bean>
+					<bean id="after" 			class="com.springbook.biz.common.AfterAdvice"></bean>
+					<bean id="around" 			class="com.springbook.biz.common.AroundAdvice"></bean>
+					
 					<aop:config>
-						<aop:pointcut expression="execution(* com.springbook.biz..*Impl.*(..))" id="allPointcut"/>
+						<aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))" />
+						<aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))" />
+						
 						<aop:aspect ref="log">
-							<aop:before method="printLog" pointcut-ref="allPointcut"/>
+							<aop:before pointcut-ref="getPointcut" method="printLog" />
+						</aop:aspect>
+						
+						<aop:aspect ref="afterReturning">
+							<aop:after-returning pointcut-ref="getPointcut" method="afterLog" />
+						</aop:aspect>
+						
+						<aop:aspect ref="afterThrowing">
+							<aop:after-throwing pointcut-ref="allPointcut" method="exveptionLog" />
+						</aop:aspect>
+						
+						<aop:aspect ref="after">
+							<aop:after pointcut-ref="allPointcut" method="finalltLog" />
+						</aop:aspect>
+						
+						<aop:aspect ref="around">
+							<aop:around pointcut-ref="allPointcut" method="aroundLog" />
 						</aop:aspect>
 						
 					</aop:config>
