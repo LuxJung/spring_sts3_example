@@ -1,3 +1,4 @@
 #Tomcat publish data
-#Mon Oct 17 14:23:10 KST 2022
-org.eclipse.jst.jee.server\:BoardMyWeb=C\:\\apache-tomcat-9.0.65\\wtpwebapps\\BoardMyWeb
+#Wed Oct 19 17:43:39 KST 2022
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\502\\.m2\\repository\\org\\springframework\\spring-web\\5.3.9\\spring-web-5.3.9.jar=C\:\\apache-tomcat-9.0.65\\wtpwebapps\\BoardWeb\\WEB-INF\\lib\\spring-web-5.3.9.jar
+org.eclipse.jst.jee.server\:BoardWeb=C\:\\apache-tomcat-9.0.65\\wtpwebapps\\BoardWeb
